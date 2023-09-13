@@ -9,9 +9,10 @@ class Category extends Model
 {
     use HasFactory;
     public $timestamps = false; 
+    protected $primaryKey = 'id_category';
     
 
 public function products (){
-    return $this->hasMany(Product::class, 'id');
+    return $this->hasMany(Product::class, 'id_category');
 }
 }
