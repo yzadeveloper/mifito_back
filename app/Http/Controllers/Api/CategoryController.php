@@ -42,7 +42,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $category = Category::findOrFail($request->$id);
+        $category = Category::findOrFail($request->id);
         $category->category_name = $request->category_name;
 
         $category->save();
