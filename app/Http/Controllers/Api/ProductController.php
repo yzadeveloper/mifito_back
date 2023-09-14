@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductRequest;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -22,6 +23,8 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        
+
         $product = new Product();
         $product->name_product = $request->name_product;
         $product->id_category = $request->id_category;
@@ -34,6 +37,7 @@ class ProductController extends Controller
         $product->ecological = $request->ecological;
 
         $product->save();
+        return $product;
     }
 
     /**

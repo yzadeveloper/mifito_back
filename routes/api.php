@@ -35,3 +35,4 @@ Route::controller(ProductController::class)->group(function () {
     Route::put('/product/{id}', 'update');
     Route::delete('/product/{id}', 'destroy');
 });
+
