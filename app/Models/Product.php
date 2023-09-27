@@ -26,6 +26,7 @@ class Product extends Model
     // public function pedidos(){
     //     return $this->belongsToMany(Pedido::class, 'plato_pedido', 'id_plato', 'id_pedido')->withPivot('cantidad_platos');
     // }
+    protected $with = ['categories'];
 
     public function categories(){
         return $this->belongsTo(Category::class, 'id_category');
